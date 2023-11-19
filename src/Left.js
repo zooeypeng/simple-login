@@ -1,5 +1,5 @@
 import './Left.css';
-import useLogin from './useLogin';
+import { useAuth } from './AuthContext';
 
 const AboutUs = () => (
   <div>About Us</div>
@@ -10,7 +10,7 @@ const Login = () => (
 )
 
 const Logout = () => {
-  const { logout } = useLogin();
+  const { logout } = useAuth();
 
   return (
     <div onClick={logout}>Logout</div>

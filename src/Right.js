@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import useLogin from './useLogin';
+import { useState } from 'react';
+import { useAuth } from './AuthContext';
+
 import './Right.css';
 
 const AboutUs = () => {
@@ -16,7 +17,7 @@ const AboutUs = () => {
 }
 
 const Login = () => {
-  const { login } = useLogin();
+  const { login } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -25,10 +26,10 @@ const Login = () => {
       return alert("Please enter your account info.")
     }
 
+    console.log(`Username: ${username}, Password: ${password}`);
     login(username);
     setUsername('');
     setPassword('');
-    console.log(`Username: ${username}, Password: ${password}`);
   };
 
   return (
@@ -41,6 +42,7 @@ const Login = () => {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            autoComplete="current-username"
           />
         </label>
         <br />
@@ -63,14 +65,14 @@ const Login = () => {
 }
 
 function Right() {
-  const { isLoggedIn } = useLogin();
+  const { isLoggedIn } = useAuth();
 
   return (
     <div className="Right">
       <AboutUs />
       {isLoggedIn ? "Logout" : <Login />}
-		Right
-	</div>
+      <span>isLoggedIn: {isLoggedIn.toString()}</span>
+	  </div>
   );
 }
 
