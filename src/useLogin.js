@@ -13,6 +13,7 @@ const useLogin = () => {
   const logout = () => {
     setLoggedIn(false);
     setUsername('');
+    console.log('hook, logout')
   };
 
   return {

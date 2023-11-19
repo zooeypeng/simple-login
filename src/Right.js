@@ -22,9 +22,12 @@ const Login = () => {
 
   const handleLogin = () => {
     if (username === '' || password === '') {
-      alert("Please enter your account info.")
+      return alert("Please enter your account info.")
     }
+
     login(username);
+    setUsername('');
+    setPassword('');
     console.log(`Username: ${username}, Password: ${password}`);
   };
 
