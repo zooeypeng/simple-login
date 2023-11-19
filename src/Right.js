@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './Right.css';
 
 const AboutUs = () => {
@@ -13,10 +14,53 @@ const AboutUs = () => {
   )
 }
 
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    if (username === '' || password === '') {
+      alert("Please enter your account info.")
+    }
+    console.log(`Username: ${username}, Password: ${password}`);
+  };
+
+  return (
+    <div>
+      <h3>Login</h3>
+      <form>
+        <label>
+          Username:
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            autoComplete="current-password"
+          />
+        </label>
+        <br />
+        <button type="button" onClick={handleLogin}>
+          Login
+        </button>
+      </form>
+    </div>
+  )
+}
+
 function Right() {
   return (
     <div className="Right">
       <AboutUs />
+      <Login />
 		Right
 	</div>
   );

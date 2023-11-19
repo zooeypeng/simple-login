@@ -1,9 +1,18 @@
 import './Left.css';
 
+const AboutUs = () => (
+  <div>About Us</div>
+)
+
+const Login = () => (
+  <div>Login</div>
+)
+
 function Left() {
   return (
     <div className="Left">
-      <div>Button 1: About Us</div>
+      <AboutUs />
+      <Login />
     </div>
   );
 }
