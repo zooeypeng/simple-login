@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useLogin from './useLogin';
 import './Right.css';
 
 const AboutUs = () => {
@@ -15,6 +16,7 @@ const AboutUs = () => {
 }
 
 const Login = () => {
+  const { login } = useLogin();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -22,6 +24,7 @@ const Login = () => {
     if (username === '' || password === '') {
       alert("Please enter your account info.")
     }
+    login(username);
     console.log(`Username: ${username}, Password: ${password}`);
   };
 
@@ -57,10 +60,12 @@ const Login = () => {
 }
 
 function Right() {
+  const { isLoggedIn } = useLogin();
+
   return (
     <div className="Right">
       <AboutUs />
-      <Login />
+      {isLoggedIn ? "Logout" : <Login />}
 		Right
 	</div>
   );
