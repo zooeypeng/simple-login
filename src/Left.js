@@ -3,8 +3,8 @@ import './Left.css';
 function Left() {
   return (
     <div className="Left">
-		Left
-	</div>
+      <div>Button 1: About Us</div>
+    </div>
   );
 }
 
