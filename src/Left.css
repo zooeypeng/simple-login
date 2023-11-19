@@ -1,11 +1,18 @@
 .Left {
+  background-color: #282c34;
+  color: white;
+  width: 200px;
+  padding: 20px;
   text-align: center;
-  float: left;
-  width: 10%;
-  height: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 1px solid black;
-  padding-left: 10px;
+}
+
+.Left div {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Left div:hover {
+  background-color: #61dafb;
 }
