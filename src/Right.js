@@ -27,10 +27,10 @@ const Login = () => {
     }
 
     console.log(`Username: ${username}, Password: ${password}`);
-    login(username);
+    login(username, password);
     setUsername('');
     setPassword('');
-  };
+  }; 
 
   return (
     <div>
@@ -64,14 +64,41 @@ const Login = () => {
   )
 }
 
+const Info = () => {
+  const [selectedTab, setSelectedTab] = useState('version');
+  const { username, password } = useAuth();
+
+  return (
+    <div>
+      <select
+        value={selectedTab}
+        onChange={(e) => setSelectedTab(e.target.value)}
+      >
+        <option value="version">Version</option>
+        <option value="user">User Info</option>
+      </select>
+      {selectedTab === 'version' && (
+        <div>
+          <p>Version: 1.0.0</p>
+        </div>
+      )}
+      {selectedTab === 'user' && (
+        <div>
+          <p>Username: {username}</p>
+          <p>Password: {password}</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function Right() {
   const { isLoggedIn } = useAuth();
 
   return (
     <div className="Right">
       <AboutUs />
-      {isLoggedIn ? "Logout" : <Login />}
-      <span>isLoggedIn: {isLoggedIn.toString()}</span>
+      {isLoggedIn ? <Info /> : <Login />}
 	  </div>
   );
 }
