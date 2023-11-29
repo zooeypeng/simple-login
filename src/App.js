@@ -3,6 +3,7 @@ import { AuthProvider } from './AuthContext';
 import Left from './Left';
 import Right from './Right';
 import AboutUs from './AboutUs';
+import Login from './Login';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Left />
           <Routes>
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/" element={<Right />} />
           </Routes>
         </Router>

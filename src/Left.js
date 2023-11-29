@@ -2,10 +2,6 @@ import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import './Left.css';
 
-const Login = () => (
-  <div>Login</div>
-)
-
 const Logout = () => {
   const { logout } = useAuth();
 
@@ -18,7 +14,7 @@ function Left() {
   return (
     <div className="Left">
       <Link to="/about-us">About Us</Link>
-      <Login />
+      <Link to="/login">Login</Link>
       <Logout />
     </div>
   );

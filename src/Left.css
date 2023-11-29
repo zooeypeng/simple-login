@@ -1,18 +1,20 @@
 .Left {
   background-color: #282c34;
-  color: white;
   width: 200px;
   padding: 20px;
   text-align: center;
 }
 
-.Left div {
+.Left a {
+  display: block;
+  color: white;
+  text-decoration: none;
   margin-bottom: 10px;
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.Left div:hover {
+.Left a:hover {
   background-color: #61dafb;
 }
