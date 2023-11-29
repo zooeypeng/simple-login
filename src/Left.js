@@ -1,9 +1,6 @@
-import './Left.css';
+import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
-
-const AboutUs = () => (
-  <div>About Us</div>
-)
+import './Left.css';
 
 const Login = () => (
   <div>Login</div>
@@ -20,7 +17,7 @@ const Logout = () => {
 function Left() {
   return (
     <div className="Left">
-      <AboutUs />
+      <Link to="/about-us">About Us</Link>
       <Login />
       <Logout />
     </div>

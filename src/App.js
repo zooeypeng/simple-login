@@ -1,17 +1,24 @@
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import Left from './Left';
 import Right from './Right';
+import AboutUs from './AboutUs';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Left />
-		    <Right />
+        <Router>
+          <Left />
+          <Routes>
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/" element={<Right />} />
+          </Routes>
+        </Router>
       </AuthProvider>
     </div>
-  );
+  );  
 }
 
 export default App;
