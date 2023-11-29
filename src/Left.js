@@ -2,20 +2,12 @@ import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import './Left.css';
 
-const Logout = () => {
-  const { logout } = useAuth();
-
-  return (
-    <div onClick={logout}>Logout</div>
-  )
-}
-
 function Left() {
+  const { logout, isLoggedIn } = useAuth();
   return (
     <div className="Left">
-      <Link to="/about-us">About Us</Link>
-      <Link to="/login">Login</Link>
-      <Logout />
+      <Link className="menu" to="/about-us">About Us</Link>
+      { isLoggedIn ? <div className="menu" onClick={logout}>Logout</div> : <Link className="menu" to="/login">Login</Link> }
     </div>
   );
 }
