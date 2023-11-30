@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from './AuthContext';
+import Info from './Info';
 import "./Login.css";
 
 const LoginForm = () => {
@@ -12,7 +13,6 @@ const LoginForm = () => {
       return alert("Please enter your account info.")
     }
 
-    console.log(`Username: ${username}, Password: ${password}`);
     login(username, password);
     setUsername('');
     setPassword('');
@@ -55,7 +55,7 @@ const Login = () => {
 
   return (
     <div className="Right">
-      {isLoggedIn ? <span>info</span> : <LoginForm />}
+      {isLoggedIn ? <Info /> : <LoginForm />}
 	  </div>
   );
 }
