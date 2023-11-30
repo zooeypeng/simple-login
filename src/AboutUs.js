@@ -1,8 +1,6 @@
-import './AboutUs.css';
-
 const AboutUs = () => {
   return (
-    <div className="company">
+    <div className="Right">
       <p>
         海碩集團成立於1981年，承攬海空物流運輸集裝專業，迄今全球已有五十一家分公司，每年貨運量近三十萬箱貨櫃、亞洲北美洲航線市占率超過百分之四以上，版圖橫跨亞洲、美洲、歐洲，提供客戶完整的全球運輸網路系統服務。
       </p>

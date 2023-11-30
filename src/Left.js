@@ -7,7 +7,7 @@ function Left() {
   return (
     <div className="Left">
       <Link className="menu" to="/about-us">About Us</Link>
-      { isLoggedIn ? <div className="menu" onClick={logout}>Logout</div> : <Link className="menu" to="/login">Login</Link> }
+      { isLoggedIn ? <div className="menu logout" onClick={logout}>Logout</div> : <Link className="menu" to="/login">Login</Link> }
     </div>
   );
 }

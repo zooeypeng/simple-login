@@ -3,6 +3,9 @@
   width: 200px;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .Left .menu {
@@ -17,4 +20,9 @@
 
 .Left .menu:hover {
   background-color: #61dafb;
+}
+
+.Left .logout {
+  margin-top: auto;
+  margin-bottom: 50px;
 }
