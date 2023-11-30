@@ -19,7 +19,7 @@ const LoginForm = () => {
   }; 
 
   return (
-    <div>
+    <div className="login-container">
       <h3>Login</h3>
       <form>
         <label>

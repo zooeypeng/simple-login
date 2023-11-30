@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 480px; /* 設定最大寬度為 480px */
-  margin: 0 auto; /* 水平置中 */
+  max-width: 480px;
+  margin: 0 auto;
   height: 100vh;
 } 
 
@@ -61,7 +61,6 @@ select:hover {
   margin: 10px 0;
   display: flex;
   width: 480px;
-  border-bottom: 1px solid #999;
 }
 
 .tab-list-item {

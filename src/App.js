@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import Left from './Left';
 import Right from './Right';
-import AboutUs from './AboutUs';
 import Login from './Login';
+import SystemInfo from './Info';
 import './App.css';
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
         <Router>
           <Left />
           <Routes>
-            <Route path="/about-us" element={<AboutUs />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/info" element={<SystemInfo />} />
             <Route path="/" element={<Right />} />
           </Routes>
         </Router>
